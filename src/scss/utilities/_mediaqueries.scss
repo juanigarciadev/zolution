@@ -11,9 +11,8 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .settingsToggledMobile {
+  .settingsToggled {
     width: 20vw;
-    margin-right: 8vw;
   }
 }
 
@@ -43,5 +42,11 @@
   }
   .navbarToggledMobile {
     display: flex;
+  }
+  .settingsToggled {
+    width: 30vw;
+  }
+  .projectCardsContainer {
+    grid-template-columns: repeat(auto-fill, 1fr);
   }
 }

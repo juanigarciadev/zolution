@@ -29,9 +29,14 @@
   width: 100vw;
   padding-top: 10vh;
   background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .homeSubtitle {
+  display: flex;
+  justify-content: center;
   width: 50vw;
   text-align: center;
 }
