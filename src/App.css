@@ -44,7 +44,7 @@
   transition: 0.2s;
 }
 
-.toggleMode {
+.settingsIcon {
   height: 30px;
   cursor: pointer;
 }
@@ -82,6 +82,8 @@
 }
 
 .subtitles {
+  display: flex;
+  align-items: center;
   font-weight: normal;
 }
 
@@ -90,9 +92,12 @@
   text-align: center;
 }
 
+.decorativeArrowContainer {
+  height: 80px;
+}
+
 .decorativeIcons {
-  font-size: 50px;
-  position: absolute;
+  font-size: 40px;
   -webkit-animation: upAndDown 3s linear infinite;
   -moz-animation: upAndDown 3s linear infinite;
   animation: upAndDown 3s linear infinite;
@@ -100,6 +105,72 @@
 
 .navbarMobileToggler {
   height: 20px;
+  cursor: pointer;
+}
+
+.iconsMini {
+  width: 20px;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: #0b0b0b;
+}
+
+.navbarToggledMobile {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 98vh;
+  width: 80vw;
+  right: 20px;
+  top: 10px;
+  position: absolute;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  -webkit-animation: toggleNavbar 0.1s linear;
+  -moz-animation: toggleNavbar 0.1s linear;
+  animation: toggleNavbar 0.1s linear;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+}
+
+.menuArrow::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  z-index: 2;
+  position: fixed;
+  rotate: 45deg;
+  top: 72px;
+  right: 35px;
+  -webkit-animation: toggleNavbar 0.1s linear;
+  -moz-animation: toggleNavbar 0.1s linear;
+  animation: toggleNavbar 0.1s linear;
+}
+
+.navLinksMobile {
+  display: flex;
+  padding-left: 45%;
+  text-decoration: none;
+  color: #0b0b0b;
+  width: 100%;
+  height: 50px;
+}
+
+.navLinksMobile:hover {
+  background-color: #ffe500;
+}
+
+.closeIcon {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  height: 30px;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -112,8 +183,22 @@
   }
 }
 
+@keyframes toggleNavbar {
+  0% {
+    -webkit-transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 3840px) {
   .navbarMobileToggler {
+    display: none;
+  }
+  .navbarToggledMobile {
     display: none;
   }
 }
@@ -122,6 +207,9 @@
 }
 
 @media screen and (max-width: 750px) {
+  .navLinks {
+    display: none;
+  }
   .navbarMobileToggler {
     display: block;
   }
@@ -141,5 +229,8 @@
   }
   .homeSubtitle {
     width: 80vw;
+  }
+  .navbarToggledMobile {
+    display: flex;
   }
 }

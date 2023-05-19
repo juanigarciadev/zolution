@@ -22,7 +22,7 @@ const Home = () => {
           molestias ipsum.
         </h3>
       </div>
-      <div>
+      <div className="decorativeArrowContainer">
         <BiChevronsDown className="decorativeIcons" />
       </div>
     </section>
