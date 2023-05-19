@@ -1,7 +1,16 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
-const Navbar = ({ mobileNavbar, setMobileNavbar, barsRef, navToggledRef }) => {
+const Navbar = ({
+  mobileNavbar,
+  setMobileNavbar,
+  barsRef,
+  navToggledRef,
+  settingsMenu,
+  setSettingsMenu,
+  settingsRef,
+  settingsMenuRef,
+}) => {
   return (
     <>
       <div className="navbarContainer">
@@ -33,6 +42,8 @@ const Navbar = ({ mobileNavbar, setMobileNavbar, barsRef, navToggledRef }) => {
             src="https://res.cloudinary.com/diruiumfk/image/upload/v1684457549/settings_v2znqe.svg"
             className="settingsIcon"
             alt="settings icon"
+            ref={settingsRef}
+            onClick={() => setSettingsMenu(!settingsMenu)}
           />
           <button className="btn getInTouch">Get in Touch</button>
           <img
@@ -68,6 +79,27 @@ const Navbar = ({ mobileNavbar, setMobileNavbar, barsRef, navToggledRef }) => {
             <Link to="/" className="subtitles navLinksMobile">
               Contact
             </Link>
+          </div>
+        </>
+      )}
+
+      {settingsMenu && (
+        <>
+          <span className="menuArrowSettings"></span>
+          <img
+            src="https://res.cloudinary.com/diruiumfk/image/upload/v1684461010/close_dkoqot.svg"
+            className="closeIcon"
+            alt=""
+          />
+          <div className="navbarToggledMobile" ref={settingsMenuRef}>
+            <div className="settingsOptions">
+              <img
+                src="https://res.cloudinary.com/diruiumfk/image/upload/v1684452792/dark-mode_kkdx8c.svg"
+                className="settingsIcon"
+                alt=""
+              />
+              <h4 className="subtitles navLinkMobile">Dark Mode</h4>
+            </div>
           </div>
         </>
       )}
