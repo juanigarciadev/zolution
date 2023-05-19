@@ -1,42 +1,145 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.homeContainer {
+  min-height: 90vh;
+  width: 100vw;
+  padding-top: 10vh;
+  background-color: white;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100px;
+  background-color: white;
+  padding: 0px 30px;
+  position: fixed;
+}
+
+.navbarBrand {
+  height: 30px;
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-color: #0b0b0b;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffe500;
+  color: #0b0b0b;
+  transition: 0.2s;
+}
+
+.toggleMode {
+  height: 30px;
+  cursor: pointer;
+}
+
+.navbarSections {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.homeHero {
+  font-size: 96px;
+  font-weight: bold;
+  text-align: center;
+  width: 65vw;
+  padding: 20px 0px;
+  min-height: 100px;
+  line-height: 96px;
+}
+
+.highlightHero {
+  font-size: 96px;
+  font-weight: bold;
+  text-align: center;
+  width: 65vw;
+  color: #ffe500;
+}
+
+.subtitles {
+  font-weight: normal;
+}
+
+.homeSubtitle {
+  width: 50vw;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.decorativeIcons {
+  font-size: 50px;
+  position: absolute;
+  -webkit-animation: upAndDown 3s linear infinite;
+  -moz-animation: upAndDown 3s linear infinite;
+  animation: upAndDown 3s linear infinite;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbarMobileToggler {
+  height: 20px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes upAndDown {
+  50% {
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
   }
 }
 
-.card {
-  padding: 2em;
+@media screen and (max-width: 3840px) {
+  .navbarMobileToggler {
+    display: none;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 750px) {
+  .navbarMobileToggler {
+    display: block;
+  }
+  .getInTouch {
+    display: none;
+  }
+  .toggleMode {
+    display: none;
+  }
+  .highlightHero {
+    font-size: 60px;
+  }
+  .homeHero {
+    font-size: 60px;
+    line-height: 60px;
+    width: 80vw;
+  }
+  .homeSubtitle {
+    width: 80vw;
+  }
 }
