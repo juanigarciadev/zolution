@@ -15,7 +15,7 @@ const Navbar = ({
     <>
       <div className="navbarContainer">
         <div className="navbarSections">
-          <Link to="/">
+          <Link to="/" draggable="false">
             <img
               src="https://res.cloudinary.com/diruiumfk/image/upload/v1684452535/zolution-logo-black_zyvpgc.svg"
               className="navbarBrand"
@@ -24,7 +24,7 @@ const Navbar = ({
           </Link>
         </div>
         <div className="navbarSections settings">
-          <Link to="/" className="subtitles navLinks">
+          <Link to="/" className="navLinks subtitles" draggable="false">
             Works{" "}
             <img
               src="https://res.cloudinary.com/diruiumfk/image/upload/v1684457890/see-more_dez2nv.svg"
@@ -32,10 +32,10 @@ const Navbar = ({
               alt=""
             />
           </Link>
-          <Link to="/" className="subtitles navLinks">
+          <Link to="/" className="navLinks subtitles" draggable="false">
             About Us
           </Link>
-          <Link to="/" className="subtitles navLinks">
+          <Link to="/" className="navLinks subtitles" draggable="false">
             Contact
           </Link>
           <img
@@ -91,7 +91,7 @@ const Navbar = ({
             className="closeIcon"
             alt=""
           />
-          <div className="navbarToggledMobile" ref={settingsMenuRef}>
+          <div className="settingsToggled" ref={settingsMenuRef}>
             <div className="settingsOptions">
               <img
                 src="https://res.cloudinary.com/diruiumfk/image/upload/v1684452792/dark-mode_kkdx8c.svg"

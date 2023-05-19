@@ -6,9 +6,8 @@ const Home = () => {
     <section className="homeContainer">
       <div>
         <h1 className="homeHero">
-          <span className="highlightHero">Original</span> and{" "}
-          <span className="highlightHero">modern</span> design at your
-          fingertips.
+          Crafting <span className="highlightHero">Beautiful</span> and{" "}
+          <span className="highlightHero">functional</span> websites.
         </h1>
       </div>
       <div>
