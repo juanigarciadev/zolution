@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Navbar = ({
+  navScroll,
   mobileNavbar,
   setMobileNavbar,
   barsRef,
@@ -13,7 +14,7 @@ const Navbar = ({
 }) => {
   return (
     <>
-      <div className="navbarContainer">
+      <div className={navScroll ? "navbarContainer active" : "navbarContainer"}>
         <div className="navbarSections">
           <Link to="/" draggable="false">
             <img

@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <section className="homeContainer">
-        <div>
+        <div className="relative">
           <h1 className="homeHero">
             Crafting <span className="highlightHero">Beautiful</span> and{" "}
             <span className="highlightHero">functional</span> websites.
@@ -14,7 +14,7 @@ const Home = () => {
         </div>
         <div>
           <h3 className="subtitles homeSubtitle">
-            Developing your dreams one at a time
+            You dream, we take care of making it come true.
           </h3>
         </div>
         <div className="decorativeArrowContainer">
