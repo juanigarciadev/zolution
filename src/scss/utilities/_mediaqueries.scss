@@ -11,16 +11,16 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .settingsToggled {
-    width: 20vw;
-  }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .navLinks {
     display: none;
   }
   .navbarMobileToggler {
+    display: block;
+  }
+  .toggledNavbarClose {
     display: block;
   }
   .getInTouch {
@@ -43,8 +43,8 @@
   .navbarToggledMobile {
     display: flex;
   }
-  .settingsToggled {
-    width: 30vw;
+  .projectsContainer {
+    height: 1900px;
   }
   .projectCardsContainer {
     grid-template-columns: repeat(auto-fill, 1fr);
