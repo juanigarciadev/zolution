@@ -1,6 +1,8 @@
-import React from "react";
 import { BiChevronsDown } from "react-icons/bi";
 import ProjectsContainer from "../Projects/ProjectsContainer";
+import ContactUs from "../ContactUs/ContactUs";
+import AboutUs from "../AboutUs/AboutUs";
+import OurTeam from "../OurTeam/OurTeam";
 
 const Home = () => {
   return (
