@@ -1,0 +1,78 @@
+.contactUsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 1000px;
+    background-color: #ffffff;
+}
+
+.contactbox1 {
+    width: 50%;
+    background-color: #ffffff;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactbox2 {
+    width: 50%;
+    background-color: black;
+}
+
+.contact--box--title {
+    font-size: 96px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0px;
+    min-height: 100px;
+}
+
+.contact--box--title:nth-child(2n) {
+    color: #ffe500;
+}
+
+.contact--box--title span {
+    color: black;
+}
+
+.contact--us--btn {
+    width: 419px;
+    height: 115px;
+    background-color: #ffe500;
+    border: none;
+    color: white;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    margin-top: 30px 10px 0 10px;
+}
+.contact--us--btn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .contactbox2 {
+        display: none;
+    }
+    .contact--box--title {
+        font-size: 77px;
+        padding: 0px;
+    }
+    .contactUsContainer {
+        height: 80vh;
+    }
+
+    .contact--us--btn {
+        width: 200px;
+        height: 60px;
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .contact--box--title {
+        font-size: 50px;
+    }
+}

@@ -1,52 +1,52 @@
 @media screen and (max-width: 3840px) {
-  .navbarMobileToggler {
-    display: none;
-  }
-  .navbarToggledMobile {
-    display: none;
-  }
-  .settingsToggledMobile {
-    width: 10vw;
-  }
+    .navbarMobileToggler {
+        display: none;
+    }
+    .navbarToggledMobile {
+        display: none;
+    }
+    .settingsToggledMobile {
+        width: 10vw;
+    }
 }
 
 @media screen and (max-width: 1199px) {
-  .settingsToggled {
-    width: 20vw;
-  }
+    .settingsToggled {
+        width: 20vw;
+    }
 }
 
 @media screen and (max-width: 750px) {
-  .navLinks {
-    display: none;
-  }
-  .navbarMobileToggler {
-    display: block;
-  }
-  .getInTouch {
-    display: none;
-  }
-  .toggleMode {
-    display: none;
-  }
-  .highlightHero {
-    font-size: 60px;
-  }
-  .homeHero {
-    font-size: 60px;
-    line-height: 60px;
-    width: 80vw;
-  }
-  .homeSubtitle {
-    width: 80vw;
-  }
-  .navbarToggledMobile {
-    display: flex;
-  }
-  .settingsToggled {
-    width: 30vw;
-  }
-  .projectCardsContainer {
-    grid-template-columns: repeat(auto-fill, 1fr);
-  }
+    .navLinks {
+        display: none;
+    }
+    .navbarMobileToggler {
+        display: block;
+    }
+    .getInTouch {
+        display: none;
+    }
+    .toggleMode {
+        display: none;
+    }
+    .highlightHero {
+        font-size: 60px;
+    }
+    .homeHero {
+        font-size: 60px;
+        line-height: 60px;
+        width: 80vw;
+    }
+    .homeSubtitle {
+        width: 80vw;
+    }
+    .navbarToggledMobile {
+        display: flex;
+    }
+    .settingsToggled {
+        width: 30vw;
+    }
+    .projectCardsContainer {
+        grid-template-columns: repeat(auto-fill, 1fr);
+    }
 }
