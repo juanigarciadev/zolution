@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 const NavbarContainer = () => {
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [settingsMenu, setSettingsMenu] = useState(false);
+  const [navScroll, setNavScroll] = useState(false);
 
   const barsRef = useRef();
   const navToggledRef = useRef();
@@ -25,8 +26,15 @@ const NavbarContainer = () => {
     }
   });
 
+  const changeBackground = () => {
+    window.scrollY >= 80 ? setNavScroll(true) : setNavScroll(false);
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <Navbar
+      navScroll={navScroll}
       mobileNavbar={mobileNavbar}
       setMobileNavbar={setMobileNavbar}
       barsRef={barsRef}

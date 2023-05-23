@@ -4,10 +4,20 @@
   justify-content: space-between;
   width: 100vw;
   height: 100px;
-  background-color: white;
+  background-color: transparent;
   padding: 0px 30px;
   position: fixed;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  transition: 0.3s;
   z-index: 1;
+}
+
+.active {
+  height: 70px;
+  background-color: rgb(255, 255, 255, 0.8);
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  backdrop-filter: blur(10px);
 }
 
 .navbarBrand {
@@ -31,31 +41,13 @@
 }
 .navLinks {
   text-decoration: none;
-  font-weight: bold;
   color: #0b0b0b;
 }
 
 .navbarToggledMobile {
   background-color: rgba(255, 255, 255, 0.8);
   height: 20vh;
-  width: 40vw;
-  right: 20px;
-  top: 76px;
-  position: fixed;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  backdrop-filter: blur(5px);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  z-index: 1;
-}
-
-.settingsToggled {
-  background-color: rgba(255, 255, 255, 0.8);
-  height: 20vh;
-  width: 15vw;
+  width: 300px;
   right: 2.8vw;
   top: 76px;
   position: fixed;
@@ -67,15 +59,45 @@
   backdrop-filter: blur(5px);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
+  -webkit-animation: toggleMenu 0.1s linear;
+  -moz-animation: toggleMenu 0.1s linear;
+  animation: toggleMenu 0.1s linear;
+}
+
+.settingsToggled {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 20vh;
+  width: 300px;
+  right: 2.8vw;
+  top: 76px;
+  position: fixed;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+  -webkit-animation: toggleMenu 0.1s linear;
+  -moz-animation: toggleMenu 0.1s linear;
+  animation: toggleMenu 0.1s linear;
 }
 
 .closeIcon {
   position: fixed;
-  right: 5vw;
+  right: 4%;
   top: 85px;
   height: 25px;
   z-index: 2;
   cursor: pointer;
+  -webkit-animation: toggleMenu 0.17s linear;
+  -moz-animation: toggleMenu 0.17s linear;
+  animation: toggleMenu 0.17s linear;
+}
+
+.toggledNavbarClose {
+  display: none;
 }
 
 .navLinksMobile {
@@ -97,6 +119,13 @@
   width: 100%;
 }
 
-.settingsOptions:hover {
-  background-color: #ffe500;
+@keyframes toggleMenu {
+  0% {
+    -webkit-transform: translateX(100%);
+    filter: opacity(0);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    filter: opacity(1);
+  }
 }

@@ -11,42 +11,45 @@
 }
 
 @media screen and (max-width: 1199px) {
-    .settingsToggled {
-        width: 20vw;
-    }
+  .projectsContainer {
+    height: 1000px;
+  }
 }
 
-@media screen and (max-width: 750px) {
-    .navLinks {
-        display: none;
-    }
-    .navbarMobileToggler {
-        display: block;
-    }
-    .getInTouch {
-        display: none;
-    }
-    .toggleMode {
-        display: none;
-    }
-    .highlightHero {
-        font-size: 60px;
-    }
-    .homeHero {
-        font-size: 60px;
-        line-height: 60px;
-        width: 80vw;
-    }
-    .homeSubtitle {
-        width: 80vw;
-    }
-    .navbarToggledMobile {
-        display: flex;
-    }
-    .settingsToggled {
-        width: 30vw;
-    }
-    .projectCardsContainer {
-        grid-template-columns: repeat(auto-fill, 1fr);
-    }
+@media screen and (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  .navbarMobileToggler {
+    display: block;
+  }
+  .toggledNavbarClose {
+    display: block;
+  }
+  .getInTouch {
+    display: none;
+  }
+  .toggleMode {
+    display: none;
+  }
+  .highlightHero {
+    font-size: 60px;
+  }
+  .homeHero {
+    font-size: 60px;
+    line-height: 60px;
+    width: 80vw;
+  }
+  .homeSubtitle {
+    width: 80vw;
+  }
+  .navbarToggledMobile {
+    display: flex;
+  }
+  .projectsContainer {
+    height: 1900px;
+  }
+  .projectCardsContainer {
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
 }

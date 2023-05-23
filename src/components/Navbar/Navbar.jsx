@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Navbar = ({
+  navScroll,
   mobileNavbar,
   setMobileNavbar,
   barsRef,
@@ -13,7 +14,7 @@ const Navbar = ({
 }) => {
   return (
     <>
-      <div className="navbarContainer">
+      <div className={navScroll ? "navbarContainer active" : "navbarContainer"}>
         <div className="navbarSections">
           <Link to="/" draggable="false">
             <img
@@ -38,21 +39,42 @@ const Navbar = ({
           <Link to="/" className="navLinks subtitles" draggable="false">
             Contact
           </Link>
-          <img
-            src="https://res.cloudinary.com/diruiumfk/image/upload/v1684457549/settings_v2znqe.svg"
-            className="settingsIcon"
-            alt="settings icon"
-            ref={settingsRef}
-            onClick={() => setSettingsMenu(!settingsMenu)}
-          />
+          {settingsMenu === true ? (
+            <img
+              src="https://res.cloudinary.com/diruiumfk/image/upload/v1684530495/settings-active_c03a6r.svg"
+              className="settingsIcon"
+              alt="settings icon"
+              ref={settingsRef}
+              onClick={() => setSettingsMenu(!settingsMenu)}
+            />
+          ) : (
+            <img
+              src="https://res.cloudinary.com/diruiumfk/image/upload/v1684457549/settings_v2znqe.svg"
+              className="settingsIcon"
+              alt="settings icon"
+              ref={settingsRef}
+              onClick={() => setSettingsMenu(!settingsMenu)}
+            />
+          )}
+
           <button className="btn getInTouch">Get in Touch</button>
-          <img
-            src="https://res.cloudinary.com/diruiumfk/image/upload/v1684455458/navbar-toggler-mobile_snhqgf.svg"
-            className="navbarMobileToggler"
-            alt=""
-            ref={barsRef}
-            onClick={() => setMobileNavbar(!mobileNavbar)}
-          />
+          {mobileNavbar === true ? (
+            <img
+              src="https://res.cloudinary.com/diruiumfk/image/upload/v1684530589/navbar-toggler-mobile-yellow_o0s4kq.svg"
+              className="navbarMobileToggler"
+              alt="settings icon"
+              ref={barsRef}
+              onClick={() => setMobileNavbar(!mobileNavbar)}
+            />
+          ) : (
+            <img
+              src="https://res.cloudinary.com/diruiumfk/image/upload/v1684455458/navbar-toggler-mobile_snhqgf.svg"
+              className="navbarMobileToggler"
+              alt="settings icon"
+              ref={barsRef}
+              onClick={() => setMobileNavbar(!mobileNavbar)}
+            />
+          )}
         </div>
       </div>
 
@@ -61,7 +83,7 @@ const Navbar = ({
           <span className="menuArrow"></span>
           <img
             src="https://res.cloudinary.com/diruiumfk/image/upload/v1684461010/close_dkoqot.svg"
-            className="closeIcon"
+            className="closeIcon toggledNavbarClose"
             alt=""
           />
           <div className="navbarToggledMobile" ref={navToggledRef}>
@@ -98,7 +120,6 @@ const Navbar = ({
                 className="settingsIcon"
                 alt=""
               />
-              <h4 className="subtitles navLinkMobile">Dark Mode</h4>
             </div>
           </div>
         </>
