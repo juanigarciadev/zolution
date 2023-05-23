@@ -1,6 +1,6 @@
 import { BiChevronsDown } from "react-icons/bi";
 import ProjectsContainer from "../Projects/ProjectsContainer";
-import ContactUs from "../ContactUs/ContactUS";
+import ContactUs from "../ContactUs/ContactUs";
 import AboutUs from "../AboutUs/AboutUs";
 import OurTeam from "../OurTeam/OurTeam";
 
