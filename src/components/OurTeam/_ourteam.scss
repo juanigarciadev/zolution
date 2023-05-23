@@ -1,71 +1,73 @@
 .ourTeamSection {
-    display: grid;
-    grid-template-columns: 50vw 25vw 25vw; /* Crea 3 columnas del mismo tamaño */
-    gap: 20px;
-    width: 100vw;
-    height: 1000px;
-    background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 50vw 25vw 25vw; /* Crea 3 columnas del mismo tamaño */
+  gap: 20px;
+  width: 100vw;
+  height: 1000px;
+  background-color: #ffffff;
 }
 
 .ourTeamSection__box1 {
-    place-items: center;
-    align-self: center;
+  place-items: center;
+  align-self: center;
 }
 .ourTeamSection__box1__title {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 96px;
-    padding: 0 100px 0 150px;
-    text-align: start;
-    letter-spacing: -0.025em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  padding: 0 100px 0 150px;
+  text-align: start;
+  letter-spacing: -0.025em;
 
-    color: #0b0b0b;
+  color: #0b0b0b;
 }
 
 .ourTeamSection__box1__pharagrap {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: -0.025em;
-    padding: 0 100px 0 150px;
-    color: #0b0b0b;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.025em;
+  padding: 0 100px 0 150px;
+  color: #0b0b0b;
 }
 
 .ourTeamSection__box2 {
-    display: grid;
-    place-items: end;
-    padding-bottom: 200px;
+  display: grid;
+  place-items: end;
+  padding-bottom: 200px;
 }
 .ourTeamSection__img1 {
-    width: 250px;
-    border-radius: 50%;
-    background-size: 450px;
+  width: 250px;
+  border-radius: 50%;
+  background-size: 450px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .ourTeamSection__box3 {
-    display: grid;
-    place-items: start;
-    padding-top: 200px;
+  display: grid;
+  place-items: start;
+  padding-top: 200px;
 }
 .ourTeamSection__img2 {
-    width: 250px;
-    border-radius: 50%;
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (max-width: 1170px) {
-    .ourTeamSection {
-        grid-template-columns: 1fr;
-        grid-template-rows: 500px 500px;
-        place-items: center;
-        align-self: center;
-    }
-    .ourTeamSection__box2 {
-        display: none;
-    }
-    .ourTeamSection__box3 {
-        display: none;
-    }
+  .ourTeamSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 500px;
+    place-items: center;
+    align-self: center;
+  }
+  .ourTeamSection__box2 {
+    display: none;
+  }
+  .ourTeamSection__box3 {
+    display: none;
+  }
 }
 @media screen and (max-width: 750px) {
 }
