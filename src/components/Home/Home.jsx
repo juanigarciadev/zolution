@@ -3,6 +3,9 @@ import ProjectsContainer from "../Projects/ProjectsContainer";
 import ContactUs from "../ContactUs/ContactUs";
 import AboutUs from "../AboutUs/AboutUs";
 import OurTeam from "../OurTeam/OurTeam";
+import ContactUsContainer from "../ContactUs/ContactUsContainer";
+import AboutUsContainer from "../AboutUs/AboutUsContainer";
+import OurTeamContainer from "../OurTeam/OurTeamContainer";
 
 const Home = () => {
   return (
@@ -24,6 +27,9 @@ const Home = () => {
         </div>
       </section>
       <ProjectsContainer />
+      <ContactUsContainer />
+      <AboutUsContainer />
+      <OurTeamContainer />
     </>
   );
 };

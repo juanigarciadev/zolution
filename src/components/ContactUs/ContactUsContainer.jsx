@@ -1,5 +1,7 @@
+import ContactUs from "./ContactUs";
+
 const ContactUsContainer = () => {
-    return <div>ContactUsContainer</div>;
+  return <ContactUs />;
 };
 
 export default ContactUsContainer;

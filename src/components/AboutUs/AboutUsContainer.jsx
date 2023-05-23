@@ -1,5 +1,7 @@
+import AboutUs from "./AboutUs";
+
 const AboutUsContainer = () => {
-    return <div>AboutUsContainer</div>;
+  return <AboutUs />;
 };
 
 export default AboutUsContainer;
